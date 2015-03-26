@@ -10,7 +10,7 @@
     <Grid Margin="0,0,0,-46">
         <Image Name ="GrumpyCat" VerticalAlignment="Top" HorizontalAlignment="Left"  Source="Pictures\GrumpyCatName.jpg" Height="217" Width="187" Margin="22,49,0,0"/>
         <TextBox Name ="EnterName" HorizontalAlignment="Left" Height="23" Margin="232,26,0,0" TextWrapping="Wrap" Text="{Binding EnteredName, Mode=TwoWay}"  VerticalAlignment="Top" Width="257"/>
-        <Button Name ="IsMyNameCool" Content="Is My Name Cool?" HorizontalAlignment="Left" Margin="276,54,0,0" VerticalAlignment="Top" Width="177" RenderTransformOrigin="0.576,-0.438" Height="30" Command="{Binding ChangePictureCommand}"/>
+        <Button Name ="IsMyNameCool" Content="Is My Name Cool?" HorizontalAlignment="Left" Margin="276,54,0,0" VerticalAlignment="Top" Width="177" RenderTransformOrigin="0.576,-0.438" Height="30" Command="{Binding ChangePictureCommand}" AutomationProperties.AutomationId="UICoolnessFactorDecisionButton"/>
         <Image Name="ResultantCat" HorizontalAlignment="Left" Height="192" Margin="275,89,0,0" VerticalAlignment="Top" Width="180" Source="{Binding ResultantCatImage, Mode=OneWay}"/>
 
         <Label Name="ResultantLabel" HorizontalAlignment="Left" Margin="215,273,0,0" VerticalAlignment="Top" Width="292" Height="42">
