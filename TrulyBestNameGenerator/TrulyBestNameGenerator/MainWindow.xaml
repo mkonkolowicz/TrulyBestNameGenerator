@@ -1,0 +1,20 @@
+﻿<Window x:Class="TrulyBestNameGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:TrulyBestNameGenerator.ViewModel"
+        xmlns:viewModel="clr-namespace:TrulyBestNameGenerator.ViewModel"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.DataContext>
+        <viewModel:MainWindowViewModel/>
+    </Window.DataContext>
+    <Grid Margin="0,0,0,-46">
+        <Image Name ="GrumpyCat" VerticalAlignment="Top" HorizontalAlignment="Left"  Source="Pictures\GrumpyCatName.jpg" Height="217" Width="187" Margin="22,49,0,0"/>
+        <TextBox Name ="EnterName" HorizontalAlignment="Left" Height="23" Margin="232,26,0,0" TextWrapping="Wrap" Text="{Binding EnteredName, Mode=TwoWay}"  VerticalAlignment="Top" Width="257"/>
+        <Button Name ="IsMyNameCool" Content="Is My Name Cool?" HorizontalAlignment="Left" Margin="276,54,0,0" VerticalAlignment="Top" Width="177" RenderTransformOrigin="0.576,-0.438" Height="30" Command="{Binding ChangePictureCommand}"/>
+        <Image Name="ResultantCat" HorizontalAlignment="Left" Height="192" Margin="275,89,0,0" VerticalAlignment="Top" Width="180" Source="{Binding ResultantCatImage, Mode=OneWay}"/>
+
+        <Label Name="ResultantLabel" HorizontalAlignment="Left" Margin="215,273,0,0" VerticalAlignment="Top" Width="292" Height="42">
+            <AccessText TextWrapping="Wrap" Text="{Binding ResultantLabelContent, Mode=TwoWay}"/>
+        </Label>
+    </Grid>
+</Window>
