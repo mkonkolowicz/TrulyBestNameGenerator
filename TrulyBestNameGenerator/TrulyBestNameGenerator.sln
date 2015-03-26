@@ -7,13 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrulyBestNameGenerator", "T
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 2
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = http://dotnettfs:8080/tfs/ql
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = TrulyBestNameGenerator\\TrulyBestNameGenerator.csproj
-		SccProjectName1 = TrulyBestNameGenerator
-		SccLocalPath1 = TrulyBestNameGenerator
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
