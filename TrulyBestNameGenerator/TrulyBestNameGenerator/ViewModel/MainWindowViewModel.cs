@@ -8,15 +8,14 @@ namespace TrulyBestNameGenerator.ViewModel
 {
     public partial class MainWindowViewModel : ObservableObject
     {
+        const string DefaultText = "Enter Your Name";
         private string _resultantCatSource;
         private string _resultantLabelContent;
         private string _enteredName;
-        const string DefaultText = "Enter Your Name";
         public byte[] ResultantCatImage
         {
             get { return File.ReadAllBytes(ResultantCatSource); }
         }
-
         public string ResultantCatSource
         {
             get
@@ -31,7 +30,6 @@ namespace TrulyBestNameGenerator.ViewModel
             } 
               
         }
-
         public string EnteredName
         {
             get
@@ -44,7 +42,6 @@ namespace TrulyBestNameGenerator.ViewModel
                 RaisePropertyChangedEvent("EnteredName");
             }
         }
-
         public string ResultantLabelContent
         {
             get
@@ -56,19 +53,20 @@ namespace TrulyBestNameGenerator.ViewModel
                 _resultantLabelContent = value;
                 RaisePropertyChangedEvent("ResultantLabelContent");
             }
-        }
-            
+        }    
         public ICommand ButtonCommand { get; set; }
         public ICommand ChangePictureCommand
         {
             get { return new DelegateCommand(DecideOnPicture); }
         }
+        
         public MainWindowViewModel()
         {
             
             ResultantCatSource = "pictures\\YouCoolMan.jpg";
             EnteredName = DefaultText;
         }
+        
         public void DecideOnPicture()
         {
             var enteredNameText = EnteredName;
@@ -89,8 +87,6 @@ namespace TrulyBestNameGenerator.ViewModel
             ResultantCatSource = "pictures\\UnimpressedCat.png";
             ResultantLabelContent = string.Format("{0}, Unimpressed Cat is Unimpressed With Your Name...", enteredNameText);
         }
-
-
         public void ChangePictureSource(object obj)
         {
             this.ResultantCatSource = "pictures\\OpenMouthCat.gif";       
